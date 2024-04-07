@@ -1,7 +1,19 @@
-import { Inter } from "next/font/google";
+import { Mea_Culpa, Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const meaCulpa = Mea_Culpa({
+  style: ["normal"],
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mea-culpa",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${meaCulpa.variable} ${inter.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
