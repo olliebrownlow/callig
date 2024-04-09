@@ -6,16 +6,10 @@ const NavLink = (props) => {
   return (
     <Link
       href={pathName}
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+      className="group rounded-lg border border-transparent px-5 py-4 transition duration-300 hover:scale-110 hover:border-gray-300 hover:dark:border-neutral-700"
     >
-      <h2 className={`mb-3 text-2xl font-semibold group-hover:text-3xl`}>
-        {pageTitle}
-      </h2>
-      <p
-        className={`m-0 max-w-[30ch] text-sm opacity-50 group-hover:text-base`}
-      >
-        {pageDescription}
-      </p>
+      <h2 className={`mb-3 text-2xl font-semibold`}>{pageTitle}</h2>
+      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>{pageDescription}</p>
     </Link>
   );
 };

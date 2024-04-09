@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         creampink: "#F6E4D9",
+        darkberry: "#230011",
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
