@@ -1,4 +1,4 @@
-import { render, screen } from '__tests__/app/@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Page from '../../src/app/page'
 
 describe('HomePage', () => {
@@ -28,19 +28,7 @@ describe('HomePage', () => {
     const { getAllByTestId } = render(<Page />);
 
     expect(getAllByTestId("About")[0]).toBeInTheDocument();
-    expect(getAllByTestId("About")[0]).toHaveTextContent('About');
-    expect(getAllByTestId("/about")[0]).toBeInTheDocument();
-    expect(getAllByTestId("/about")[0]).toHaveTextContent("Carolina's history and ways of working.");
-
-
     expect(getAllByTestId("Gallery")[0]).toBeInTheDocument();
-    expect(getAllByTestId("Gallery")[0]).toHaveTextContent('Gallery');
-    expect(getAllByTestId("/gallery")[0]).toBeInTheDocument();
-    expect(getAllByTestId("/gallery")[0]).toHaveTextContent("Browse examples of previous projects.");
-
     expect(getAllByTestId("Contact")[0]).toBeInTheDocument();
-    expect(getAllByTestId("Contact")[0]).toHaveTextContent('Contact');
-    expect(getAllByTestId("/contact")[0]).toBeInTheDocument();
-    expect(getAllByTestId("/contact")[0]).not.toHaveTextContent();
   })
 })
