@@ -1,9 +1,12 @@
 "use client";
+import { useThemeDetector } from "../hooks/useThemeDetector";
 import { slide as Menu } from "react-burger-menu";
 import navLinks from "../config/navLinks";
 import NavLink from "../components/homeComponents/navLink";
 
 export default function Home() {
+  const isDarkTheme = useThemeDetector();
+
   // burger menu styles
   var styles = {
     bmBurgerButton: {
@@ -14,8 +17,8 @@ export default function Home() {
       top: "34px",
     },
     bmBurgerBars: {
-      background: "dimgrey",
-      // opacity: "0.5",
+      background: isDarkTheme ? "#F6E4D9" : "#230011",
+      opacity: "0.75",
     },
     bmBurgerBarsHover: {
       background: "black",
@@ -74,7 +77,7 @@ export default function Home() {
           Contact
         </a>
       </Menu>
-      
+
       <h1
         data-testid="homepage-title"
         className={`font-mono text-center mb-3 text-7xl`}
