@@ -1,4 +1,5 @@
 import { Mea_Culpa, Inter } from "next/font/google";
+import BurgerMenu from "../components/sharedComponents/burgerMenu";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${meaCulpa.variable} ${inter.variable}`}>
+        <BurgerMenu />
         {children}
       </body>
     </html>

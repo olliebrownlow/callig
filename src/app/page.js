@@ -1,12 +1,9 @@
-import BurgerMenu from "../components/sharedComponents/burgerMenu";
 import navLinks from "../config/navLinks";
 import NavLink from "../components/homeComponents/navLink";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <BurgerMenu />
-
       <h1
         data-testid="homepage-title"
         className={`font-mono text-center mb-3 text-7xl`}
