@@ -1,5 +1,5 @@
 "use client";
-import { useThemeDetector } from "../../hooks/useThemeDetector";
+import useThemeDetector from "../../hooks/useThemeDetector";
 import { slide as Menu } from "react-burger-menu";
 
 const BurgerMenu = () => {
