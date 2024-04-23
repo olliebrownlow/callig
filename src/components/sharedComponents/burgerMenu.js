@@ -60,16 +60,16 @@ const BurgerMenu = () => {
 
   return (
     <Menu styles={styles} width={"33%"}>
-      <a id="home" className="menu-item" href={"/"}>
+      <a id="home" data-testid="home" className="menu-item" href={"/"}>
         Home
       </a>
-      <a id="about" className="menu-item" href={"/about"}>
+      <a id="about" data-testid="about" className="menu-item" href={"/about"}>
         About
       </a>
-      <a id="gallery" className="menu-item" href={"/gallery"}>
+      <a id="gallery" data-testid="gallery" className="menu-item" href={"/gallery"}>
         Gallery
       </a>
-      <a id="contact" className="menu-item" href={"/contact"}>
+      <a id="contact" data-testid="contact" className="menu-item" href={"/contact"}>
         Contact
       </a>
     </Menu>
