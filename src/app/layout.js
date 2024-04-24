@@ -18,7 +18,7 @@ const meaCulpa = Mea_Culpa({
 
 export const metadata = {
   title: "Carolina Calligraphy",
-  description: "High quality callgraphy projects",
+  description: "High quality calligraphy projects",
 };
 
 export default function RootLayout({ children }) {
