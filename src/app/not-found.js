@@ -9,7 +9,11 @@ export default function NotFound() {
       <p className={`m-2 mt-4 max-w-[30ch] text-xl opacity-70`}>
         Looks like you've tried to navigate to the wrong place
       </p>
-      <Link className={`border-2 border-indigo-900 rounded m-0 p-8 mt-8 text-sm`} href="/">
+      <Link
+        data-testid="goHome"
+        className={`border-2 border-indigo-900 rounded m-0 p-8 mt-8 text-sm`}
+        href="/"
+      >
         RETURN HOME
       </Link>
     </div>

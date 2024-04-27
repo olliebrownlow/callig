@@ -1,7 +1,7 @@
 describe("Navigation", () => {
   it("should navigate to the contact page from a navlink", () => {
     // Start from the index page
-    cy.visit("http://localhost:3000/");
+    cy.visit("/");
 
     // Find a link with an href attribute containing "contact" and click it
     cy.get('a[href*="contact"]').last().click();
@@ -15,9 +15,9 @@ describe("Navigation", () => {
 
   it("should navigate to the contact page from the burger menu", () => {
     // Start from the index page
-    cy.visit("http://localhost:3000/");
-    
-    cy.get('.bm-burger-button').click();
+    cy.visit("/");
+
+    cy.get(".bm-burger-button").click();
 
     // Find a link with an href attribute containing "contact" and click it
     cy.get('a[href*="contact"]').first().click();
