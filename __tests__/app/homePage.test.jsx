@@ -7,14 +7,14 @@ describe('HomePage', () => {
     const main = screen.getByRole('main')
  
     expect(main).toBeInTheDocument()
-  })
+  });
 
   it('has a title', () => {
     render(<Page />)
     const title = screen.getByTestId('homepage-title')
  
     expect(title).toBeInTheDocument();
-  })
+  });
 
   it('the title is an h1 tag, is Carolina Calligraphy and has tbe correct font', () => {
     render(<Page />)
@@ -22,13 +22,18 @@ describe('HomePage', () => {
  
     expect(homePageTitleText).toHaveTextContent('Carolina Calligraphy');
     expect(homePageTitleText).toHaveClass('font-mono');
-  })
+  });
 
   it('renders NavLinks correctly', () => {
     const { getAllByTestId } = render(<Page />);
 
     expect(getAllByTestId("About")[0]).toBeInTheDocument();
+    expect(getAllByTestId("About")[0]).toHaveAttribute('href', '/about');
+
     expect(getAllByTestId("Gallery")[0]).toBeInTheDocument();
+    expect(getAllByTestId("Gallery")[0]).toHaveAttribute('href', '/gallery');
+
     expect(getAllByTestId("Contact")[0]).toBeInTheDocument();
-  })
-})
+    expect(getAllByTestId("Contact")[0]).toHaveAttribute('href', '/contact');
+  });
+});
